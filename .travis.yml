@@ -2,16 +2,9 @@ dist: xenial
 language: python
 python:
   - 3.9-dev
-  - 3.8
-  - 3.7
-  - 3.6
 
 env:
-  - JEDI_TEST_ENVIRONMENT=38
   - JEDI_TEST_ENVIRONMENT=39
-  - JEDI_TEST_ENVIRONMENT=37
-  - JEDI_TEST_ENVIRONMENT=36
-  - JEDI_TEST_ENVIRONMENT=interpreter
 
 matrix:
   include:
@@ -71,4 +64,4 @@ script:
         fi
       fi
       set +ex
-    - pytest
+    - pytest -v
